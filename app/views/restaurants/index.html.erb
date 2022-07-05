@@ -1,0 +1,7 @@
+<% @restaurants.each do |restaurant| %>
+  <div class="d-flex flex-column">
+    <h3><%= link_to restaurant.name, restaurant_path(restaurant) %></h3>
+    <p><%= restaurant.address %></p>
+    <p><%= restaurant.category %></p>
+  </div>
+<% end %>

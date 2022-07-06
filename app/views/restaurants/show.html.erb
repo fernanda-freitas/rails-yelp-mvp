@@ -3,4 +3,17 @@
   <p><%= @restaurant.address %></p>
   <p><%= @restaurant.category %></p>
 </div>
-<%= link_to 'Back', restaurants_path%>
+<%= link_to 'Back', restaurants_path%> |
+<%= link_to 'Create Review', new_restaurant_review_path(@restaurant)%>
+
+<div class="mt-4">
+  <% @restaurant.reviews.each do |review| %>
+    <hr>
+    <div class="d-block my-4">
+      <div class="stars">
+        <%= '⭐️' * review.rating %>
+      </div>
+      <%= review.content %>
+    </div>
+  <% end %>
+</div>

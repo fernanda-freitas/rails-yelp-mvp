@@ -1,12 +1,10 @@
 
 <div class="row">
   <% @restaurants.each do |restaurant| %>
-    <div class="card col-md-3 g-3">
-      <div class=" p-3">
-        <h5 class="card-title"><%= link_to restaurant.name, restaurant_path(restaurant) %></h5>
-        <p class="card-text"><%= restaurant.address %></p>
-        <p class="card-text"><small class="text-muted"><%= restaurant.category %></small></p>
-      </div>
+    <div class="custom-card-index col-md-3 g-3 me-3">
+      <h5 class="restaurant-title"><%= link_to restaurant.name, restaurant_path(restaurant), {:style=>'color:#0a0c0f;'} %></h5>
+      <p class="restaurant-adress"><%= restaurant.address %></p>
+      <p class="restaurant-type"><%= restaurant.category %></p>
     </div>
   <% end %>
 </div>

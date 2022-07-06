@@ -19,7 +19,7 @@
   </div>
   <div class="mt-4">
     <% @restaurant.reviews.each do |review| %>
-      <div class="d-block my-4">
+      <div class="d-block my-4 review">
         <div class="stars mb-2">
           <% review.rating.times do %>
             <%= image_tag "star.svg", class:'star', height: 8 * review.rating %>

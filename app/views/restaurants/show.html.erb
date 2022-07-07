@@ -17,7 +17,9 @@
       <% end %>
     </div>
   </div>
-  <div class="mt-4">
+</div>
+<% if @restaurant.reviews %>
+  <div class="custom-card mt-3">
     <% @restaurant.reviews.each do |review| %>
       <div class="d-block my-4 review">
         <div class="stars mb-2">
@@ -29,4 +31,4 @@
       </div>
     <% end %>
   </div>
-</div>
+<% end %>

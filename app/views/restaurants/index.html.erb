@@ -1,10 +1,11 @@
-
-<div class="row">
+<div class="grid-container">
   <% @restaurants.each do |restaurant| %>
-    <div class="custom-card-index col-md-3 g-3 me-3">
-      <h5 class="restaurant-title"><%= link_to restaurant.name, restaurant_path(restaurant), {:style=>'color:#0a0c0f;'} %></h5>
-      <p class="restaurant-adress"><%= restaurant.address %></p>
-      <p class="restaurant-type"><%= restaurant.category %></p>
+    <div class="grid-item">
+      <div class="custom-card-index">
+          <h5 class="restaurant-title"><%= link_to restaurant.name, restaurant_path(restaurant), {:style=>'color:#0a0c0f;'} %></h5>
+          <p class="restaurant-adress"><%= restaurant.address %></p>
+          <p class="restaurant-type"><%= restaurant.category %></p>
+        </div>
     </div>
   <% end %>
 </div>
